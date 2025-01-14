@@ -3,11 +3,34 @@
     <title>Image Gallery</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
-        .gallery { display: flex; flex-wrap: wrap; gap: 10px; }
-        .gallery div { text-align: center; }
-        img { max-width: 200px; max-height: 200px; border: 1px solid #ccc; border-radius: 5px; }
-        .selected-images { margin-top: 20px; }
-        .selected-images img { margin: 5px; }
+        .gallery { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+            justify-content: center; 
+        }
+        .gallery div { 
+            text-align: center; 
+            width: 45%; /* Default to 2 images per row */
+        }
+        img { 
+            max-width: 100%; 
+            max-height: 200px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+        }
+        .selected-images { 
+            margin-top: 20px; 
+        }
+        .selected-images img { 
+            margin: 5px; 
+        }
+        /* Media Query for mobile devices */
+        @media (max-width: 600px) {
+            .gallery div { 
+                width: 48%; /* 2 images per row on mobile */
+            }
+        }
     </style>
 </head>
 <body>
