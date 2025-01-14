@@ -1,0 +1,354 @@
+<html>
+<head>
+    <title>Image Gallery</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .gallery { display: flex; flex-wrap: wrap; gap: 10px; }
+        .gallery div { text-align: center; }
+        img { max-width: 200px; max-height: 200px; border: 1px solid #ccc; border-radius: 5px; }
+        .selected-images { margin-top: 20px; }
+        .selected-images img { margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Interactive Image Gallery</h1>
+    <div class="gallery">
+        <div>
+            <input type="checkbox" id="P9105131_400x.jpg" name="selected_images" value="P9105131_400x.jpg" onchange="updateSelectedImages('P9105131_400x.jpg', this)">
+            <label for="P9105131_400x.jpg">
+                <img src="P9105131_400x.jpg" alt="P9105131_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="Temple_400x.jpg" name="selected_images" value="Temple_400x.jpg" onchange="updateSelectedImages('Temple_400x.jpg', this)">
+            <label for="Temple_400x.jpg">
+                <img src="Temple_400x.jpg" alt="Temple_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="PC268555a_400x.jpg" name="selected_images" value="PC268555a_400x.jpg" onchange="updateSelectedImages('PC268555a_400x.jpg', this)">
+            <label for="PC268555a_400x.jpg">
+                <img src="PC268555a_400x.jpg" alt="PC268555a_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="PA233792_400x.jpg" name="selected_images" value="PA233792_400x.jpg" onchange="updateSelectedImages('PA233792_400x.jpg', this)">
+            <label for="PA233792_400x.jpg">
+                <img src="PA233792_400x.jpg" alt="PA233792_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P2075317_400x.jpg" name="selected_images" value="P2075317_400x.jpg" onchange="updateSelectedImages('P2075317_400x.jpg', this)">
+            <label for="P2075317_400x.jpg">
+                <img src="P2075317_400x.jpg" alt="P2075317_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC01161_400x.jpg" name="selected_images" value="DSC01161_400x.jpg" onchange="updateSelectedImages('DSC01161_400x.jpg', this)">
+            <label for="DSC01161_400x.jpg">
+                <img src="DSC01161_400x.jpg" alt="DSC01161_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P8072571_400x.jpg" name="selected_images" value="P8072571_400x.jpg" onchange="updateSelectedImages('P8072571_400x.jpg', this)">
+            <label for="P8072571_400x.jpg">
+                <img src="P8072571_400x.jpg" alt="P8072571_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4293953_400x.jpg" name="selected_images" value="P4293953_400x.jpg" onchange="updateSelectedImages('P4293953_400x.jpg', this)">
+            <label for="P4293953_400x.jpg">
+                <img src="P4293953_400x.jpg" alt="P4293953_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC01185_400x.jpg" name="selected_images" value="DSC01185_400x.jpg" onchange="updateSelectedImages('DSC01185_400x.jpg', this)">
+            <label for="DSC01185_400x.jpg">
+                <img src="DSC01185_400x.jpg" alt="DSC01185_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="PB196025_400x.jpg" name="selected_images" value="PB196025_400x.jpg" onchange="updateSelectedImages('PB196025_400x.jpg', this)">
+            <label for="PB196025_400x.jpg">
+                <img src="PB196025_400x.jpg" alt="PB196025_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC04689_400x.jpg" name="selected_images" value="DSC04689_400x.jpg" onchange="updateSelectedImages('DSC04689_400x.jpg', this)">
+            <label for="DSC04689_400x.jpg">
+                <img src="DSC04689_400x.jpg" alt="DSC04689_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4293970_400x.jpg" name="selected_images" value="P4293970_400x.jpg" onchange="updateSelectedImages('P4293970_400x.jpg', this)">
+            <label for="P4293970_400x.jpg">
+                <img src="P4293970_400x.jpg" alt="P4293970_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4294099_400x.jpg" name="selected_images" value="P4294099_400x.jpg" onchange="updateSelectedImages('P4294099_400x.jpg', this)">
+            <label for="P4294099_400x.jpg">
+                <img src="P4294099_400x.jpg" alt="P4294099_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="PC047552_400x.jpg" name="selected_images" value="PC047552_400x.jpg" onchange="updateSelectedImages('PC047552_400x.jpg', this)">
+            <label for="PC047552_400x.jpg">
+                <img src="PC047552_400x.jpg" alt="PC047552_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC09267_400x.jpg" name="selected_images" value="DSC09267_400x.jpg" onchange="updateSelectedImages('DSC09267_400x.jpg', this)">
+            <label for="DSC09267_400x.jpg">
+                <img src="DSC09267_400x.jpg" alt="DSC09267_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC_0262_3bafe56f-8ada-4c0e-a21e-3664a025a69c_400x.jpg" name="selected_images" value="DSC_0262_3bafe56f-8ada-4c0e-a21e-3664a025a69c_400x.jpg" onchange="updateSelectedImages('DSC_0262_3bafe56f-8ada-4c0e-a21e-3664a025a69c_400x.jpg', this)">
+            <label for="DSC_0262_3bafe56f-8ada-4c0e-a21e-3664a025a69c_400x.jpg">
+                <img src="DSC_0262_3bafe56f-8ada-4c0e-a21e-3664a025a69c_400x.jpg" alt="DSC_0262_3bafe56f-8ada-4c0e-a21e-3664a025a69c_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P7029571_400x.jpg" name="selected_images" value="P7029571_400x.jpg" onchange="updateSelectedImages('P7029571_400x.jpg', this)">
+            <label for="P7029571_400x.jpg">
+                <img src="P7029571_400x.jpg" alt="P7029571_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4294092_400x.jpg" name="selected_images" value="P4294092_400x.jpg" onchange="updateSelectedImages('P4294092_400x.jpg', this)">
+            <label for="P4294092_400x.jpg">
+                <img src="P4294092_400x.jpg" alt="P4294092_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="hartung-lithographie-espoir-01_400x.jpg" name="selected_images" value="hartung-lithographie-espoir-01_400x.jpg" onchange="updateSelectedImages('hartung-lithographie-espoir-01_400x.jpg', this)">
+            <label for="hartung-lithographie-espoir-01_400x.jpg">
+                <img src="hartung-lithographie-espoir-01_400x.jpg" alt="hartung-lithographie-espoir-01_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC04757_400x.jpg" name="selected_images" value="DSC04757_400x.jpg" onchange="updateSelectedImages('DSC04757_400x.jpg', this)">
+            <label for="DSC04757_400x.jpg">
+                <img src="DSC04757_400x.jpg" alt="DSC04757_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC_0491_34b6ac57-fa28-42aa-ae06-1c2740b4105f_400x.jpg" name="selected_images" value="DSC_0491_34b6ac57-fa28-42aa-ae06-1c2740b4105f_400x.jpg" onchange="updateSelectedImages('DSC_0491_34b6ac57-fa28-42aa-ae06-1c2740b4105f_400x.jpg', this)">
+            <label for="DSC_0491_34b6ac57-fa28-42aa-ae06-1c2740b4105f_400x.jpg">
+                <img src="DSC_0491_34b6ac57-fa28-42aa-ae06-1c2740b4105f_400x.jpg" alt="DSC_0491_34b6ac57-fa28-42aa-ae06-1c2740b4105f_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4150764_400x.jpg" name="selected_images" value="P4150764_400x.jpg" onchange="updateSelectedImages('P4150764_400x.jpg', this)">
+            <label for="P4150764_400x.jpg">
+                <img src="P4150764_400x.jpg" alt="P4150764_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P1068810_400x.jpg" name="selected_images" value="P1068810_400x.jpg" onchange="updateSelectedImages('P1068810_400x.jpg', this)">
+            <label for="P1068810_400x.jpg">
+                <img src="P1068810_400x.jpg" alt="P1068810_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="miro-lithographie-personnage-surrealiste-01_400x.jpg" name="selected_images" value="miro-lithographie-personnage-surrealiste-01_400x.jpg" onchange="updateSelectedImages('miro-lithographie-personnage-surrealiste-01_400x.jpg', this)">
+            <label for="miro-lithographie-personnage-surrealiste-01_400x.jpg">
+                <img src="miro-lithographie-personnage-surrealiste-01_400x.jpg" alt="miro-lithographie-personnage-surrealiste-01_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC09506_400x.jpg" name="selected_images" value="DSC09506_400x.jpg" onchange="updateSelectedImages('DSC09506_400x.jpg', this)">
+            <label for="DSC09506_400x.jpg">
+                <img src="DSC09506_400x.jpg" alt="DSC09506_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="Affaire01_400x.jpg" name="selected_images" value="Affaire01_400x.jpg" onchange="updateSelectedImages('Affaire01_400x.jpg', this)">
+            <label for="Affaire01_400x.jpg">
+                <img src="Affaire01_400x.jpg" alt="Affaire01_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="CALDERTravestis-00_400x.jpg" name="selected_images" value="CALDERTravestis-00_400x.jpg" onchange="updateSelectedImages('CALDERTravestis-00_400x.jpg', this)">
+            <label for="CALDERTravestis-00_400x.jpg">
+                <img src="CALDERTravestis-00_400x.jpg" alt="CALDERTravestis-00_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC_0726_400x.jpg" name="selected_images" value="DSC_0726_400x.jpg" onchange="updateSelectedImages('DSC_0726_400x.jpg', this)">
+            <label for="DSC_0726_400x.jpg">
+                <img src="DSC_0726_400x.jpg" alt="DSC_0726_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4119777_400x.jpg" name="selected_images" value="P4119777_400x.jpg" onchange="updateSelectedImages('P4119777_400x.jpg', this)">
+            <label for="P4119777_400x.jpg">
+                <img src="P4119777_400x.jpg" alt="P4119777_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4294058_400x.jpg" name="selected_images" value="P4294058_400x.jpg" onchange="updateSelectedImages('P4294058_400x.jpg', this)">
+            <label for="P4294058_400x.jpg">
+                <img src="P4294058_400x.jpg" alt="P4294058_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC01174_400x.jpg" name="selected_images" value="DSC01174_400x.jpg" onchange="updateSelectedImages('DSC01174_400x.jpg', this)">
+            <label for="DSC01174_400x.jpg">
+                <img src="DSC01174_400x.jpg" alt="DSC01174_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC08861_400x.jpg" name="selected_images" value="DSC08861_400x.jpg" onchange="updateSelectedImages('DSC08861_400x.jpg', this)">
+            <label for="DSC08861_400x.jpg">
+                <img src="DSC08861_400x.jpg" alt="DSC08861_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P2193717_400x.jpg" name="selected_images" value="P2193717_400x.jpg" onchange="updateSelectedImages('P2193717_400x.jpg', this)">
+            <label for="P2193717_400x.jpg">
+                <img src="P2193717_400x.jpg" alt="P2193717_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P6055654_400x.jpg" name="selected_images" value="P6055654_400x.jpg" onchange="updateSelectedImages('P6055654_400x.jpg', this)">
+            <label for="P6055654_400x.jpg">
+                <img src="P6055654_400x.jpg" alt="P6055654_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P1119013_400x.jpg" name="selected_images" value="P1119013_400x.jpg" onchange="updateSelectedImages('P1119013_400x.jpg', this)">
+            <label for="P1119013_400x.jpg">
+                <img src="P1119013_400x.jpg" alt="P1119013_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC09272_400x.jpg" name="selected_images" value="DSC09272_400x.jpg" onchange="updateSelectedImages('DSC09272_400x.jpg', this)">
+            <label for="DSC09272_400x.jpg">
+                <img src="DSC09272_400x.jpg" alt="DSC09272_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4294087_400x.jpg" name="selected_images" value="P4294087_400x.jpg" onchange="updateSelectedImages('P4294087_400x.jpg', this)">
+            <label for="P4294087_400x.jpg">
+                <img src="P4294087_400x.jpg" alt="P4294087_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC09296_400x.jpg" name="selected_images" value="DSC09296_400x.jpg" onchange="updateSelectedImages('DSC09296_400x.jpg', this)">
+            <label for="DSC09296_400x.jpg">
+                <img src="DSC09296_400x.jpg" alt="DSC09296_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="capogrossi-lithographie-caracteres-miroir-01_400x.jpg" name="selected_images" value="capogrossi-lithographie-caracteres-miroir-01_400x.jpg" onchange="updateSelectedImages('capogrossi-lithographie-caracteres-miroir-01_400x.jpg', this)">
+            <label for="capogrossi-lithographie-caracteres-miroir-01_400x.jpg">
+                <img src="capogrossi-lithographie-caracteres-miroir-01_400x.jpg" alt="capogrossi-lithographie-caracteres-miroir-01_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="zavaro-lithographie-cavaliers-plage-01_400x.jpg" name="selected_images" value="zavaro-lithographie-cavaliers-plage-01_400x.jpg" onchange="updateSelectedImages('zavaro-lithographie-cavaliers-plage-01_400x.jpg', this)">
+            <label for="zavaro-lithographie-cavaliers-plage-01_400x.jpg">
+                <img src="zavaro-lithographie-cavaliers-plage-01_400x.jpg" alt="zavaro-lithographie-cavaliers-plage-01_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4293965_400x.jpg" name="selected_images" value="P4293965_400x.jpg" onchange="updateSelectedImages('P4293965_400x.jpg', this)">
+            <label for="P4293965_400x.jpg">
+                <img src="P4293965_400x.jpg" alt="P4293965_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P4070313_400x.jpg" name="selected_images" value="P4070313_400x.jpg" onchange="updateSelectedImages('P4070313_400x.jpg', this)">
+            <label for="P4070313_400x.jpg">
+                <img src="P4070313_400x.jpg" alt="P4070313_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="PB246385_400x.jpg" name="selected_images" value="PB246385_400x.jpg" onchange="updateSelectedImages('PB246385_400x.jpg', this)">
+            <label for="PB246385_400x.jpg">
+                <img src="PB246385_400x.jpg" alt="PB246385_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P9296717_400x.jpg" name="selected_images" value="P9296717_400x.jpg" onchange="updateSelectedImages('P9296717_400x.jpg', this)">
+            <label for="P9296717_400x.jpg">
+                <img src="P9296717_400x.jpg" alt="P9296717_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P9245479_400x.jpg" name="selected_images" value="P9245479_400x.jpg" onchange="updateSelectedImages('P9245479_400x.jpg', this)">
+            <label for="P9245479_400x.jpg">
+                <img src="P9245479_400x.jpg" alt="P9245479_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="PC268648a_400x.jpg" name="selected_images" value="PC268648a_400x.jpg" onchange="updateSelectedImages('PC268648a_400x.jpg', this)">
+            <label for="PC268648a_400x.jpg">
+                <img src="PC268648a_400x.jpg" alt="PC268648a_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="verdet-lithographie-pluie-01_400x.jpg" name="selected_images" value="verdet-lithographie-pluie-01_400x.jpg" onchange="updateSelectedImages('verdet-lithographie-pluie-01_400x.jpg', this)">
+            <label for="verdet-lithographie-pluie-01_400x.jpg">
+                <img src="verdet-lithographie-pluie-01_400x.jpg" alt="verdet-lithographie-pluie-01_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="AffichesAmelie-110_375050de-af8b-46b2-b5eb-08aa40402a30_400x.jpg" name="selected_images" value="AffichesAmelie-110_375050de-af8b-46b2-b5eb-08aa40402a30_400x.jpg" onchange="updateSelectedImages('AffichesAmelie-110_375050de-af8b-46b2-b5eb-08aa40402a30_400x.jpg', this)">
+            <label for="AffichesAmelie-110_375050de-af8b-46b2-b5eb-08aa40402a30_400x.jpg">
+                <img src="AffichesAmelie-110_375050de-af8b-46b2-b5eb-08aa40402a30_400x.jpg" alt="AffichesAmelie-110_375050de-af8b-46b2-b5eb-08aa40402a30_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC01641_400x.jpg" name="selected_images" value="DSC01641_400x.jpg" onchange="updateSelectedImages('DSC01641_400x.jpg', this)">
+            <label for="DSC01641_400x.jpg">
+                <img src="DSC01641_400x.jpg" alt="DSC01641_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC01197_400x.jpg" name="selected_images" value="DSC01197_400x.jpg" onchange="updateSelectedImages('DSC01197_400x.jpg', this)">
+            <label for="DSC01197_400x.jpg">
+                <img src="DSC01197_400x.jpg" alt="DSC01197_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="P3052672_400x.jpg" name="selected_images" value="P3052672_400x.jpg" onchange="updateSelectedImages('P3052672_400x.jpg', this)">
+            <label for="P3052672_400x.jpg">
+                <img src="P3052672_400x.jpg" alt="P3052672_400x.jpg" />
+            </label>
+        </div>
+        <div>
+            <input type="checkbox" id="DSC01150_81d6d036-1b4d-4312-ae03-659e42399838_400x.jpg" name="selected_images" value="DSC01150_81d6d036-1b4d-4312-ae03-659e42399838_400x.jpg" onchange="updateSelectedImages('DSC01150_81d6d036-1b4d-4312-ae03-659e42399838_400x.jpg', this)">
+            <label for="DSC01150_81d6d036-1b4d-4312-ae03-659e42399838_400x.jpg">
+                <img src="DSC01150_81d6d036-1b4d-4312-ae03-659e42399838_400x.jpg" alt="DSC01150_81d6d036-1b4d-4312-ae03-659e42399838_400x.jpg" />
+            </label>
+        </div>
+    </div>
+    <div class="selected-images">
+        <h3>Selected Images:</h3>
+        <div id="selected-images-container"></div>
+    </div>
+    <script>
+        function updateSelectedImages(imagePath, checkbox) {
+            const container = document.getElementById('selected-images-container');
+
+            if (checkbox.checked) {
+                // Add the image to the selected images container
+                const imgElement = document.createElement('img');
+                imgElement.src = imagePath;
+                imgElement.alt = checkbox.value;
+                imgElement.setAttribute('data-image', checkbox.value);
+                container.appendChild(imgElement);
+            } else {
+                // Remove the image from the selected images container
+                const imgElement = container.querySelector(`img[data-image="${checkbox.value}"]`);
+                if (imgElement) {
+                    container.removeChild(imgElement);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
