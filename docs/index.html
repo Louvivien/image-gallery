@@ -1,21 +1,21 @@
 <html>
 <head>
-    <title>Image Gallery</title>
+    <title>Galerie d'images</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .gallery { 
             display: flex; 
-            flex-wrap: wrap; 
-            gap: 10px; 
-            justify-content: center; 
+            flex-direction: column; 
+            gap: 15px; 
+            align-items: center; 
         }
         .gallery div { 
             text-align: center; 
-            width: 45%; /* Default to 2 images per row */
+            width: 100%; 
+            max-width: 600px; /* Limite la taille maximale des images */
         }
         img { 
             max-width: 100%; 
-            max-height: 200px; 
             border: 1px solid #ccc; 
             border-radius: 5px; 
         }
@@ -24,17 +24,12 @@
         }
         .selected-images img { 
             margin: 5px; 
-        }
-        /* Media Query for mobile devices */
-        @media (max-width: 600px) {
-            .gallery div { 
-                width: 48%; /* 2 images per row on mobile */
-            }
+            max-width: 100px; /* Petite taille pour les images sélectionnées */
         }
     </style>
 </head>
 <body>
-    <h1>Interactive Image Gallery</h1>
+    <h1>Galerie Interactive</h1>
     <div class="gallery">
         <div>
             <input type="checkbox" id="P9105131_400x.jpg" name="selected_images" value="P9105131_400x.jpg" onchange="updateSelectedImages('P9105131_400x.jpg', this)">
@@ -52,12 +47,6 @@
             <input type="checkbox" id="PC268555a_400x.jpg" name="selected_images" value="PC268555a_400x.jpg" onchange="updateSelectedImages('PC268555a_400x.jpg', this)">
             <label for="PC268555a_400x.jpg">
                 <img src="PC268555a_400x.jpg" alt="PC268555a_400x.jpg" />
-            </label>
-        </div>
-        <div>
-            <input type="checkbox" id="PA233792_400x.jpg" name="selected_images" value="PA233792_400x.jpg" onchange="updateSelectedImages('PA233792_400x.jpg', this)">
-            <label for="PA233792_400x.jpg">
-                <img src="PA233792_400x.jpg" alt="PA233792_400x.jpg" />
             </label>
         </div>
         <div>
@@ -88,12 +77,6 @@
             <input type="checkbox" id="DSC01185_400x.jpg" name="selected_images" value="DSC01185_400x.jpg" onchange="updateSelectedImages('DSC01185_400x.jpg', this)">
             <label for="DSC01185_400x.jpg">
                 <img src="DSC01185_400x.jpg" alt="DSC01185_400x.jpg" />
-            </label>
-        </div>
-        <div>
-            <input type="checkbox" id="PB196025_400x.jpg" name="selected_images" value="PB196025_400x.jpg" onchange="updateSelectedImages('PB196025_400x.jpg', this)">
-            <label for="PB196025_400x.jpg">
-                <img src="PB196025_400x.jpg" alt="PB196025_400x.jpg" />
             </label>
         </div>
         <div>
@@ -229,12 +212,6 @@
             </label>
         </div>
         <div>
-            <input type="checkbox" id="P2193717_400x.jpg" name="selected_images" value="P2193717_400x.jpg" onchange="updateSelectedImages('P2193717_400x.jpg', this)">
-            <label for="P2193717_400x.jpg">
-                <img src="P2193717_400x.jpg" alt="P2193717_400x.jpg" />
-            </label>
-        </div>
-        <div>
             <input type="checkbox" id="P6055654_400x.jpg" name="selected_images" value="P6055654_400x.jpg" onchange="updateSelectedImages('P6055654_400x.jpg', this)">
             <label for="P6055654_400x.jpg">
                 <img src="P6055654_400x.jpg" alt="P6055654_400x.jpg" />
@@ -286,12 +263,6 @@
             <input type="checkbox" id="P4070313_400x.jpg" name="selected_images" value="P4070313_400x.jpg" onchange="updateSelectedImages('P4070313_400x.jpg', this)">
             <label for="P4070313_400x.jpg">
                 <img src="P4070313_400x.jpg" alt="P4070313_400x.jpg" />
-            </label>
-        </div>
-        <div>
-            <input type="checkbox" id="PB246385_400x.jpg" name="selected_images" value="PB246385_400x.jpg" onchange="updateSelectedImages('PB246385_400x.jpg', this)">
-            <label for="PB246385_400x.jpg">
-                <img src="PB246385_400x.jpg" alt="PB246385_400x.jpg" />
             </label>
         </div>
         <div>
@@ -350,7 +321,7 @@
         </div>
     </div>
     <div class="selected-images">
-        <h3>Selected Images:</h3>
+        <h3>Images Sélectionnées :</h3>
         <div id="selected-images-container"></div>
     </div>
     <script>
@@ -358,14 +329,14 @@
             const container = document.getElementById('selected-images-container');
 
             if (checkbox.checked) {
-                // Add the image to the selected images container
+                // Ajoute l'image dans la section des images sélectionnées
                 const imgElement = document.createElement('img');
                 imgElement.src = imagePath;
                 imgElement.alt = checkbox.value;
                 imgElement.setAttribute('data-image', checkbox.value);
                 container.appendChild(imgElement);
             } else {
-                // Remove the image from the selected images container
+                // Supprime l'image de la section des images sélectionnées
                 const imgElement = container.querySelector(`img[data-image="${checkbox.value}"]`);
                 if (imgElement) {
                     container.removeChild(imgElement);
